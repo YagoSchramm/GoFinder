@@ -24,10 +24,10 @@ Migration atual: `infrastructure/script/migrate/001-create-tables.up.sql`
 | Entidade | Descricao | Status |
 | --- | --- | --- |
 | `users` | Usuarios cadastrados para autenticacao | Implementado |
-| `searches` | Buscas feitas pelos usuarios | Estrutura SQL criada, uso na API DONE |
-| `products` | Produtos encontrados em cada busca | Estrutura SQL criada, uso na API TODO |
-| `price_history` | Historico de preco por produto e loja | Estrutura SQL criada, uso na API TODO |
-| `alerts` | Alertas de preco por usuario | Estrutura SQL criada, uso na API TODO |
+| `searches` | Buscas feitas pelos usuarios | Implementada |
+| `products` | Produtos encontrados em cada busca | Implementada |
+| `price_history` | Historico de preco por produto e loja | Implementada |
+| `alerts` | Alertas de preco por usuario | Implementada |
 
 ## Endpoints
 
