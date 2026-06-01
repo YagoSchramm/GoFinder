@@ -62,12 +62,15 @@ func (r *searchRepo) FindByID(ctx context.Context, id string) (*entity.Search, e
 	defer rows.Close()
 	var search entity.Search
 	for rows.Next() {
-		rows.Scan(
+		err = rows.Scan(
 			search.ID,
 			search.User_ID,
 			search.Query,
 			search.CreatedAt,
 		)
+		if err != nil {
+			return nil, derr.JoinError("Failed to scan the rows", err)
+		}
 	}
 	return &search, nil
 }
@@ -84,12 +87,15 @@ func (r *searchRepo) FindByQuery(ctx context.Context, query string, since time.T
 	defer rows.Close()
 	var search entity.Search
 	for rows.Next() {
-		rows.Scan(
+		err = rows.Scan(
 			search.ID,
 			search.User_ID,
 			search.Query,
 			search.CreatedAt,
 		)
+		if err != nil {
+			return nil, derr.JoinError("Failed to scan the rows", err)
+		}
 	}
 	return &search, nil
 }
@@ -107,12 +113,15 @@ func (r *searchRepo) FindByUserID(ctx context.Context, userID string) ([]entity.
 	var searches []entity.Search
 	for rows.Next() {
 		var search entity.Search
-		rows.Scan(
+		err = rows.Scan(
 			search.ID,
 			search.User_ID,
 			search.Query,
 			search.CreatedAt,
 		)
+		if err != nil {
+			return nil, derr.JoinError("Failed to scan the rows", err)
+		}
 		searches = append(searches, search)
 	}
 	return searches, nil

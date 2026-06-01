@@ -64,7 +64,7 @@ func (r *productRepo) FindBySearchID(ctx context.Context, searchID string) ([]en
 	var products []entity.Product
 	for rows.Next() {
 		var product entity.Product
-		rows.Scan(
+		err = rows.Scan(
 			product.ID,
 			product.Search_ID,
 			product.Title,
@@ -74,6 +74,9 @@ func (r *productRepo) FindBySearchID(ctx context.Context, searchID string) ([]en
 			product.Thumbnail,
 			product.Found_At,
 		)
+		if err != nil {
+			return nil, derr.JoinError("Failed to scan the rows", err)
+		}
 		products = append(products, product)
 	}
 	return products, nil
@@ -91,7 +94,7 @@ func (r *productRepo) FindByURL(ctx context.Context, url string) (*entity.Produc
 	defer rows.Close()
 	var product entity.Product
 	for rows.Next() {
-		rows.Scan(
+		err = rows.Scan(
 			product.ID,
 			product.Search_ID,
 			product.Title,
@@ -101,6 +104,9 @@ func (r *productRepo) FindByURL(ctx context.Context, url string) (*entity.Produc
 			product.Thumbnail,
 			product.Found_At,
 		)
+		if err != nil {
+			return nil, derr.JoinError("Failed to scan the rows", err)
+		}
 	}
 	return &product, nil
 }
