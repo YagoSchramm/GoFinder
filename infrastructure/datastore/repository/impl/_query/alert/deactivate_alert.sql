@@ -1,0 +1,1 @@
+UPDATE alerts SET active = false WHERE id = $1
