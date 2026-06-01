@@ -80,7 +80,7 @@ func (r *alertRepo) FindActive(ctx context.Context) ([]entity.Alert, error) {
 	var alerts []entity.Alert
 	for rows.Next() {
 		var alert entity.Alert
-		rows.Scan(
+		err = rows.Scan(
 			alert.ID,
 			alert.User_ID,
 			alert.Product_Url,
@@ -89,6 +89,9 @@ func (r *alertRepo) FindActive(ctx context.Context) ([]entity.Alert, error) {
 			alert.Active,
 			alert.CreatedAt,
 		)
+		if err != nil {
+			return nil, derr.JoinError("Failed to scan the rows", err)
+		}
 		alerts = append(alerts, alert)
 	}
 
@@ -108,8 +111,7 @@ func (r *alertRepo) FindByID(ctx context.Context, id string) (*entity.Alert, err
 	defer rows.Close()
 	var alert entity.Alert
 	for rows.Next() {
-
-		rows.Scan(
+		err = rows.Scan(
 			alert.ID,
 			alert.User_ID,
 			alert.Product_Url,
@@ -118,6 +120,9 @@ func (r *alertRepo) FindByID(ctx context.Context, id string) (*entity.Alert, err
 			alert.Active,
 			alert.CreatedAt,
 		)
+		if err != nil {
+			return nil, derr.JoinError("Failed to scan the rows", err)
+		}
 	}
 
 	return &alert, nil
@@ -137,7 +142,7 @@ func (r *alertRepo) FindByUserID(ctx context.Context, userID string) ([]entity.A
 	var alerts []entity.Alert
 	for rows.Next() {
 		var alert entity.Alert
-		rows.Scan(
+		err = rows.Scan(
 			alert.ID,
 			alert.User_ID,
 			alert.Product_Url,
@@ -146,6 +151,9 @@ func (r *alertRepo) FindByUserID(ctx context.Context, userID string) ([]entity.A
 			alert.Active,
 			alert.CreatedAt,
 		)
+		if err != nil {
+			return nil, derr.JoinError("Failed to scan the rows", err)
+		}
 		alerts = append(alerts, alert)
 	}
 

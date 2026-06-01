@@ -91,7 +91,6 @@ func (r *priceHistoryRepo) FindLatestByProductURL(ctx context.Context, productUR
 	defer rows.Close()
 	var priceHistory entity.PriceHistory
 	for rows.Next() {
-
 		err = rows.Scan(
 			priceHistory.ID,
 			priceHistory.Product_Url,
