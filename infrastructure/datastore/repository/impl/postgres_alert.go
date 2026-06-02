@@ -101,7 +101,7 @@ func (r *alertRepo) FindActive(ctx context.Context) ([]entity.Alert, error) {
 func (r *alertRepo) FindByID(ctx context.Context, id string) (*entity.Alert, error) {
 	rows, err := r.db.QueryContext(
 		ctx,
-		findAlertByUserIdQuery,
+		findAlertByIdQuery,
 		id,
 	)
 	if err != nil {
