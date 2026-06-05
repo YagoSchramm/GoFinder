@@ -3,7 +3,7 @@ package scraper
 import (
 	"context"
 
-	"github.com/YagoSchramm/GoDepot/domain/entity"
+	"github.com/YagoSchramm/GoFinder/domain/entity"
 )
 
 type Scraper interface {

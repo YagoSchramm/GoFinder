@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/YagoSchramm/GoDepot/domain/entity"
+	"github.com/YagoSchramm/GoFinder/domain/entity"
 )
 
 type Registry struct {

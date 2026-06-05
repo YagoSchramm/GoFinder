@@ -1,6 +1,6 @@
 package main
 
-import "github.com/YagoSchramm/GoDepot/service"
+import "github.com/YagoSchramm/GoFinder/service"
 
 func main() {
 	service.Build()

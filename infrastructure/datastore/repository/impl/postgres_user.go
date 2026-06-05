@@ -5,9 +5,9 @@ import (
 	"database/sql"
 	_ "embed"
 
-	"github.com/YagoSchramm/GoDepot/domain/entity"
-	"github.com/YagoSchramm/GoDepot/domain/entity/derr"
-	"github.com/YagoSchramm/GoDepot/infrastructure/datastore/repository"
+	"github.com/YagoSchramm/GoFinder/domain/entity"
+	"github.com/YagoSchramm/GoFinder/domain/entity/derr"
+	"github.com/YagoSchramm/GoFinder/infrastructure/datastore/repository"
 	"github.com/google/uuid"
 )
 
