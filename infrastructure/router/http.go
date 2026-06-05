@@ -5,7 +5,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/YagoSchramm/GoDepot/domain/entity/derr"
+	"github.com/YagoSchramm/GoFinder/domain/entity/derr"
 )
 
 type SucessfulResponse struct {

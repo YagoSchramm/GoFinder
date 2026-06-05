@@ -5,11 +5,11 @@ import (
 	"os"
 	"strings"
 
-	usecaseimpl "github.com/YagoSchramm/GoDepot/domain/usecase/impl"
-	repoimpl "github.com/YagoSchramm/GoDepot/infrastructure/datastore/repository/impl"
-	"github.com/YagoSchramm/GoDepot/infrastructure/foundation/db"
-	approuter "github.com/YagoSchramm/GoDepot/infrastructure/router"
-	modules "github.com/YagoSchramm/GoDepot/infrastructure/router/module"
+	usecaseimpl "github.com/YagoSchramm/GoFinder/domain/usecase/impl"
+	repoimpl "github.com/YagoSchramm/GoFinder/infrastructure/datastore/repository/impl"
+	"github.com/YagoSchramm/GoFinder/infrastructure/foundation/db"
+	approuter "github.com/YagoSchramm/GoFinder/infrastructure/router"
+	modules "github.com/YagoSchramm/GoFinder/infrastructure/router/module"
 	"github.com/gorilla/mux"
 )
 

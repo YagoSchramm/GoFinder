@@ -8,14 +8,15 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/YagoSchramm/GoDepot/domain/entity"
-	"github.com/YagoSchramm/GoDepot/infrastructure/scraper"
-	"github.com/YagoSchramm/GoDepot/infrastructure/scraper/impl/dtos"
+	"github.com/YagoSchramm/GoFinder/domain/entity"
+	"github.com/YagoSchramm/GoFinder/infrastructure/scraper"
+	"github.com/YagoSchramm/GoFinder/infrastructure/scraper/impl/dtos"
 )
 
-func NewKabumScraper() scraper.Scraper {
+func NewKabumScraper(url string) scraper.Scraper {
 	return &KabumScraper{
-		client: &http.Client{Timeout: 10 * time.Second},
+		client:    &http.Client{Timeout: 10 * time.Second},
+		searchUrl: url,
 	}
 }
 
@@ -25,7 +26,7 @@ type KabumScraper struct {
 }
 
 func (s *KabumScraper) Name() string {
-	panic("unimplemented")
+	return "kabum"
 }
 
 func (s *KabumScraper) Search(ctx context.Context, query string) ([]entity.Product, error) {

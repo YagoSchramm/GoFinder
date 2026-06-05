@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/YagoSchramm/GoDepot/domain/entity"
-	"github.com/YagoSchramm/GoDepot/domain/entity/derr"
-	"github.com/YagoSchramm/GoDepot/domain/usecase"
-	"github.com/YagoSchramm/GoDepot/infrastructure/foundation/jwt"
-	"github.com/YagoSchramm/GoDepot/infrastructure/router"
+	"github.com/YagoSchramm/GoFinder/domain/entity"
+	"github.com/YagoSchramm/GoFinder/domain/entity/derr"
+	"github.com/YagoSchramm/GoFinder/domain/usecase"
+	"github.com/YagoSchramm/GoFinder/infrastructure/foundation/jwt"
+	"github.com/YagoSchramm/GoFinder/infrastructure/router"
 	"github.com/gorilla/mux"
 )
 

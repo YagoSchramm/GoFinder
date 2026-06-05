@@ -4,13 +4,13 @@ import (
 	"context"
 	"errors"
 
-	"github.com/YagoSchramm/GoDepot/domain/entity"
-	"github.com/YagoSchramm/GoDepot/domain/entity/derr"
-	"github.com/YagoSchramm/GoDepot/domain/rules"
-	"github.com/YagoSchramm/GoDepot/domain/usecase"
-	"github.com/YagoSchramm/GoDepot/infrastructure/datastore/repository"
-	"github.com/YagoSchramm/GoDepot/infrastructure/foundation/hash"
-	"github.com/YagoSchramm/GoDepot/infrastructure/foundation/jwt"
+	"github.com/YagoSchramm/GoFinder/domain/entity"
+	"github.com/YagoSchramm/GoFinder/domain/entity/derr"
+	"github.com/YagoSchramm/GoFinder/domain/rules"
+	"github.com/YagoSchramm/GoFinder/domain/usecase"
+	"github.com/YagoSchramm/GoFinder/infrastructure/datastore/repository"
+	"github.com/YagoSchramm/GoFinder/infrastructure/foundation/hash"
+	"github.com/YagoSchramm/GoFinder/infrastructure/foundation/jwt"
 	"github.com/google/uuid"
 )
 

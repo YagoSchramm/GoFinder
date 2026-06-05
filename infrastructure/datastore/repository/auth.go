@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"github.com/YagoSchramm/GoDepot/domain/entity"
+	"github.com/YagoSchramm/GoFinder/domain/entity"
 	"github.com/google/uuid"
 )
 

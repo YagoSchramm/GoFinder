@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/YagoSchramm/GoDepot/domain/entity"
+	"github.com/YagoSchramm/GoFinder/domain/entity"
 )
 
 type SearchRepository interface {
