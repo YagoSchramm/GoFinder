@@ -62,8 +62,8 @@ Migration atual: `infrastructure/script/migrate/001-create-tables.up.sql`
 
 | Lib | Uso | Status |
 | --- | --- | --- |
-| `colly` | Scraping principal | TODO |
-| `chromedp` | Sites com JS pesado como Shopee e Americanas | TODO |
+| `colly` | Scraping principal | Doing |
+| `chromedp` | Sites com JS pesado como Shopee e Americanas | Done |
 | `robfig/cron` | Job periodico de alertas | TODO |
 | `redis` | Cache de buscas | TODO |
 
